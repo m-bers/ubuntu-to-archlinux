@@ -34,6 +34,7 @@ wget https://geo.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-cloudimg.qc
 # Download Arch Linux cloud image
 modprobe nbd max_part=8
 qemu-nbd --connect=/dev/nbd0 /tmp/tmproot/Arch-Linux-x86_64-cloudimg.qcow2
+sleep 5
 mount /dev/nbd0p2 /mnt
 
 # Do stuff on the image
