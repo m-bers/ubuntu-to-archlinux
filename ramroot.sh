@@ -37,7 +37,7 @@ qemu-nbd --connect=/dev/nbd0 /tmp/tmproot/Arch-Linux-x86_64-cloudimg.qcow2
 mount /dev/nbd0p2 /mnt
 
 # Do stuff on the image
-chroot /mnt echo "root:$PASSWORD" | chpasswd
+chroot /mnt bash -c "echo \"root:$PASSWORD\" | chpasswd"
 
 # Cleanup
 umount /mnt
