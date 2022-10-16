@@ -65,9 +65,9 @@ systemctl list-units \
 systemctl daemon-reexec
 
 # Moment of truth, umount disk
-fuser -vkm /oldroot
-umount -l /oldroot/
+# fuser -vkm /oldroot
+# umount -l /oldroot/
 
-# Copy image to disk
-qemu-img convert -f qcow2 -O raw /Arch-Linux-x86_64-cloudimg.qcow2 /dev/vda
-reboot
+# # Copy image to disk
+# qemu-img convert -f qcow2 -O raw /Arch-Linux-x86_64-cloudimg.qcow2 /dev/vda
+# reboot
