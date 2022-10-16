@@ -42,6 +42,7 @@ chroot /mnt bash -c "echo \"root:$PASSWORD\" | chpasswd"
 
 # Cleanup
 umount /mnt
+sleep 5
 qemu-nbd --disconnect /dev/nbd0
 rmmod nbd
 
